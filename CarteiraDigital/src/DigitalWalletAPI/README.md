@@ -32,30 +32,6 @@ A Digital Wallet API é um serviço RESTful projetado para gerenciar carteiras d
    ```
 
 2. Atualizar o `appsettings.json` com sua PostgreSQL connection string.
-   ```
-    {
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Database=DigitalWalletDB;Username=your_username;Password=your_password"
-  },
-  "Jwt": {
-    "Key": "your_secret_key",
-    "Issuer": "your_issuer",
-    "Audience": "your_audience",
-    "DurationInMinutes": 60
-  },
-  "SeedData": {
-    "Enable": true
-  }
-}
-   ```
 
 3. Executar o migrations para o banco de dados:
    ```
