@@ -1,9 +1,9 @@
 # Digital Wallet API
 
-## Overview
-The Digital Wallet API is a RESTful service designed to manage digital wallets and financial transactions. It provides functionalities for user authentication, wallet management, and transaction processing. This API is built using C# with .NET Core and utilizes PostgreSQL as the relational database.
+## Visão Geral
+A Digital Wallet API é um serviço RESTful projetado para gerenciar carteiras digitais e transações financeiras. Ele fornece funcionalidades para autenticação de usuário, gerenciamento de carteira e processamento de transações. Esta API é construída em C# com .NET Core e utiliza PostgreSQL como banco de dados relacional.
 
-## Features
+## Características
 - User Authentication with JWT
 - Create and manage user accounts
 - Check wallet balance
@@ -11,65 +11,89 @@ The Digital Wallet API is a RESTful service designed to manage digital wallets a
 - Transfer funds between users
 - List transfers with optional date filtering
 
-## Technologies Used
-- C# with .NET Core
-- PostgreSQL for the database
-- Entity Framework Core for data access
-- Swagger for API documentation and testing
+## Tecnologias Empregadas
+- C# com .NET Core
+- PostgreSQL para banco de dados
+- Entity Framework Core para acesso de dados
+- Swagger para dpcumentação dos endpoints das API's e teste.
 
-## Getting Started
+## Informações iniciais
 
-### Prerequisites
-- .NET SDK (latest version)
-- PostgreSQL database server
-- An IDE or text editor (e.g., Visual Studio Code)
+### Pré requisitos
+- .NET SDK (última versão)
+- PostgreSQL
+- IDE or text editor (ex., utilizado o Visual Studio Code)
 
-### Setup
-1. Clone the repository:
+### Instalação
+1. Clone o repositório:
    ```
    git clone https://github.com/yourusername/DigitalWalletAPI.git
    cd DigitalWalletAPI
    ```
 
-2. Update the `appsettings.json` file with your PostgreSQL connection string.
+2. Atualizar o `appsettings.json` com sua PostgreSQL connection string.
+   ```
+    {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Database=DigitalWalletDB;Username=your_username;Password=your_password"
+  },
+  "Jwt": {
+    "Key": "your_secret_key",
+    "Issuer": "your_issuer",
+    "Audience": "your_audience",
+    "DurationInMinutes": 60
+  },
+  "SeedData": {
+    "Enable": true
+  }
+}
+   ```
 
-3. Run the database migrations:
+3. Executar o migrations para o banco de dados:
    ```
    dotnet ef database update
    ```
 
-4. Seed the database with initial data:
+4. Propagar o banco de dados com dados iniciais:
    ```
    dotnet run
    ```
 
-### Running the Application
-To run the application, use the following command:
+### Executar a aplicação
+Para executar a aplicação, usar o comando de linha:
 ```
 dotnet run
 ```
 
-### Accessing the API
-Once the application is running, you can access the API at `http://localhost:5000`. Swagger UI can be accessed at `http://localhost:5000/swagger` for testing the API endpoints.
+### Acesso às API's
+Depois que o aplicativo estiver em execução, você poderá acessar a API em `http://localhost:5000`. A IU do Swagger pode ser acessada em `http://localhost:5000/swagger` para testar os endpoints.
 
 ## API Endpoints
 - **Authentication**
   - POST `/api/auth/login` - Login and receive a JWT token.
 
 - **User Management**
-  - POST `/api/users` - Create a new user.
-  - GET `/api/users/{id}` - Retrieve user details.
+  - POST `/api/users` - Cria novos usuários.
+  - GET `/api/users/{id}` - Recupera os dados dos usuários.
 
 - **Wallet Management**
-  - GET `/api/wallets/{userId}/balance` - Check wallet balance.
-  - POST `/api/wallets/{userId}/add` - Add funds to wallet.
+  - GET `/api/wallets/{userId}/balance` - Verifica o balanço da carteira.
+  - POST `/api/wallets/{userId}/add` - Adiciona fundos a carteira.
 
 - **Transfer Management**
-  - POST `/api/transfers` - Create a transfer between users.
-  - GET `/api/transfers/{userId}` - List transfers for a user with optional date filtering.
+  - POST `/api/transfers` - Cria uma transferência entre usuários.
+  - GET `/api/transfers/{userId}` - Listar transferências para um usuário com filtragem de data opcional.
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
+## Contribuições
+Contribuições são bem-vindas! Envie uma solicitação pull ou abra um problema para sugestões ou melhorias.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter detalhes.
