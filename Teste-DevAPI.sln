@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CarteiraDigital", "CarteiraDigital", "{B97BEC61-8298-C1C2-0ED0-31A396CD1DA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E38B1C7C-51E3-2582-FFC3-F81E6EC350D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWalletAPI", "CarteiraDigital\src\DigitalWalletAPI\DigitalWalletAPI.csproj", "{2182E21E-3159-F313-818D-67A81488ADFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2182E21E-3159-F313-818D-67A81488ADFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2182E21E-3159-F313-818D-67A81488ADFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2182E21E-3159-F313-818D-67A81488ADFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2182E21E-3159-F313-818D-67A81488ADFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E38B1C7C-51E3-2582-FFC3-F81E6EC350D8} = {B97BEC61-8298-C1C2-0ED0-31A396CD1DA8}
+		{2182E21E-3159-F313-818D-67A81488ADFE} = {E38B1C7C-51E3-2582-FFC3-F81E6EC350D8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9170468E-8CCA-460E-AAB1-05BA733DC244}
+	EndGlobalSection
+EndGlobal
